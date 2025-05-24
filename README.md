@@ -38,7 +38,7 @@ This is the basic usage. If you want to see more you can read [API](/API.md)
 This plugin is **zero config**, means you don't need to configure anything to works. But if you want to, you can configure it like this:
 
 <details>
-  <summary><strong>My Nvim Config</strong></summary></br>
+  <summary><strong>My Nvim Config (Kraxli)</strong></summary></br>
   
 ```lua
   {
