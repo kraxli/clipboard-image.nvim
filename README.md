@@ -72,6 +72,7 @@ This plugin is **zero config**, means you don't need to configure anything to wo
     end,
   },
 ```
+</details>
 
 <details>
   <summary><strong>Example</strong></summary></br>
