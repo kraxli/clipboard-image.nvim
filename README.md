@@ -38,6 +38,42 @@ This is the basic usage. If you want to see more you can read [API](/API.md)
 This plugin is **zero config**, means you don't need to configure anything to works. But if you want to, you can configure it like this:
 
 <details>
+  <summary><strong>My Nvim Config</strong></summary></br>
+  
+```lua
+  {
+    "kraxli/clipboard-image.nvim",
+    enabled = false,
+    cmd = "PasteImg",
+    ft = { "markdown", "text", "vimwiki" },
+    config = function()
+      require("clipboard-image").setup {
+        default = {
+          img_dir = "img",
+          img_dir_txt = "img",
+          img_name = function()
+            -- local img_dir = 'img' -- require'clipboard-image.config'.get_config().img_dir()
+            return os.date "%Y-%m-%d-%H-%M-%S"
+          end,
+          affix = function()
+            if vim.has "win64" then
+              return "![](%s)"
+            else
+              return "![](/%s)"
+            end
+          end,
+        },
+        -- markdown = {
+        --   img_dir = 'src/assets/img',
+        --   img_dir_txt = '/assets/img',
+        --   affix = '![](%s)',
+        -- },
+      }
+    end,
+  },
+```
+
+<details>
   <summary><strong>Example</strong></summary></br>
 
 ```lua
